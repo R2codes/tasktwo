@@ -1,0 +1,38 @@
+body{
+  overflow-x: hidden;
+  
+ 
+}
+
+.search{
+  background: transparent !important;
+  color: white !important;
+  
+}
+
+input::placeholder {
+  color: white !important;
+}
+
+.header{
+  height:100vh !important;
+ 
+  background-image: url('./images/Poster.svg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+
+}
+
+.fill{
+  height: 90vh !important;
+}
+
+.sec{
+  border-radius: 50% !important;
+  border: 10px solid gray !important;
+  background: gray !important;
+}
+
+
