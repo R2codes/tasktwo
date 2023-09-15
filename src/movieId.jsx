@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -86,10 +85,13 @@ const options = {
                <Row className="mx-auto " style={{ width:'90%'}}>
                 <Col md={8} className="ps-0">
                     <div className="py-1">
-                            <span className="fw-bold">{movieDetails.title}</span> <span  className="fw-bold">{movieDetails.release_date}</span> <span  className="fw-bold">{movieDetails.runtime}m</span>
+                            <span className="fw-bold" data-testid="movie-title">{movieDetails.title}</span> 
+                            <span  className="fw-bold" data-testid=
+                             "movie-release-date">{movieDetails.release_date}</span> 
+                             <span  className="fw-bold" data-testid= "movie-runtime">{movieDetails.runtime}</span>
                     </div>
                
-                   <div className="overview"> {movieDetails.overview} </div>
+                   <div className="overview" data-testid= "movie-overview"> {movieDetails.overview} </div>
                    <div className="writers d-grid gap-2">
                      <span className="py-1">Director: <span  style={{color:"rgba(190, 18, 60, 1)"}}>Joseph Kosinski</span> </span>
                     <span>Writers: <span  style={{color:"rgba(190, 18, 60, 1)"}}>Jim Cash, Jack Epps Jr, Peter Craig</span></span>  

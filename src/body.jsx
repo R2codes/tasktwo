@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,10 +7,8 @@ import Image from "react-bootstrap/Image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 import Logo from "./images/Logo.svg"
-import poster from "./images/Poster.svg"
 import menu from "./images/Menu.svg"
 import imdb from "./images/IMDB.svg"
-import seeMore from "./images/See.svg"
 import Description from "./images/Description Box.svg"
 import Icon from "./images/Icon.svg"
 import Tomatoes from "./images/Tomatoes.svg"
@@ -24,7 +21,6 @@ import { Link } from "react-router-dom";
 const Body = () => {
     const [dett, setDett] = useState([]);
     const [movTitle, setMovTitle] = useState("");
-    const [totalMovie, setTotalMovie] = useState([]);
     const [fav, setFav] = useState(true);
   
     const options = {
@@ -133,10 +129,10 @@ const Body = () => {
                   className="d-flex justify-content-around pb-5"
                 >
                    <Link to={`/movies/${res.id}`}>
-                  <Card className="border-0" >
+                  <Card className="border-0" data-testid= "movie-card">
                   
                     <Card.Img fluid className="w-100"
-                      variant="top"
+                      variant="top" data-testid= "movie-poster"
                       src={"https://image.tmdb.org/t/p/w500" + res.poster_path}
                     />
                      <Card.ImgOverlay>
@@ -147,8 +143,8 @@ const Body = () => {
        
       </Card.ImgOverlay>
                     <Card.Body className="ps-0">
-                      <Card.Text>USA {res.release_date}</Card.Text>
-                      <Card.Title>{res.title}</Card.Title>
+                      <Card.Text data-testid="movie-release-date">{res.release_date}</Card.Text>
+                      <Card.Title data-testid= "movie-title">{res.title}</Card.Title>
                       <Card.Text className="d-flex justify-content-between ">
                       <Image src={imdb} /> <Image src={Tomatoes} />
         </Card.Text>
