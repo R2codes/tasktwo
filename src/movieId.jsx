@@ -30,7 +30,7 @@ const MovieId = () => {
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjA4OTlmZGRkODNlZDM4MWFhNDIzNjNiOTMzMmYxYiIsInN1YiI6IjY0ZmU0ZDhiYzJmZjNkMDExYmQ5Nzc2MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Q1aQsmoI71SVBfYeWNoAVCC2xhyqsR3hC3UYXWOgvww",
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZGFlODY1Nzk3MWU1YjEwOTk0YjhhNzQ0M2I3NTlkMSIsInN1YiI6IjY0ZmYxNzU5ZWZlYTdhMDBjMzk2MTY4MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Lx3-bBGP7tRXIabPZFNZpT52BqFWK9fyWMzRx8Mv9Qg",
     },
   };
 

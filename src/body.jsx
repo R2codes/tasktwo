@@ -21,14 +21,14 @@ import { Link } from "react-router-dom";
 const Body = () => {
     const [dett, setDett] = useState([]);
     const [movTitle, setMovTitle] = useState("");
-    const [fav, setFav] = useState(true);
+    // const [fav, setFav] = useState(true);
   
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjA4OTlmZGRkODNlZDM4MWFhNDIzNjNiOTMzMmYxYiIsInN1YiI6IjY0ZmU0ZDhiYzJmZjNkMDExYmQ5Nzc2MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Q1aQsmoI71SVBfYeWNoAVCC2xhyqsR3hC3UYXWOgvww",
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZGFlODY1Nzk3MWU1YjEwOTk0YjhhNzQ0M2I3NTlkMSIsInN1YiI6IjY0ZmYxNzU5ZWZlYTdhMDBjMzk2MTY4MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Lx3-bBGP7tRXIabPZFNZpT52BqFWK9fyWMzRx8Mv9Qg",
       },
     };
     useEffect(() => {
@@ -41,10 +41,11 @@ const Body = () => {
           setDett(response.results.slice(0,10));
         })
         .catch((err) => console.error(err));
+        // eslint-disable-next-line
     }, []);
   
     const search = (e) => {
-      setFav(false);
+      // setFav(false);
       e.preventDefault();
   
       fetch(
