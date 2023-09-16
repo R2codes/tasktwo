@@ -1,7 +1,8 @@
 body{
   overflow-x: hidden;
-  
- 
+}
+*{
+  text-decoration: none !important;
 }
 
 .search{
